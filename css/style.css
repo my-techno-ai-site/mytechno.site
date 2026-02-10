@@ -1,0 +1,297 @@
+/* --- Global Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* --- Navigation --- */
+header {
+    background: #0f172a;
+    color: white;
+    padding: 1.2rem 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container Logo di Kiri */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+}
+
+.logo-text span {
+    color: #38bdf8;
+}
+
+/* Menu Navigasi */
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.btn-cta {
+    background: #38bdf8;
+    color: #0f172a !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+                url('https://images.unsplash.com/photo-1620712943543-bcc4628c6750?auto=format&fit=crop&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 10%;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.hero-content button {
+    padding: 16px 45px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* --- Services Section --- */
+#services {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.service-card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+/* --- About Section --- */
+.about-section {
+    padding: 120px 15%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+.about-content p {
+    font-size: 1.15rem;
+    color: #475569;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- Contact Section --- */
+#contact {
+    padding: 100px 10%;
+    background: #f1f5f9;
+}
+
+.contact-container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    padding: 60px 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-container p {
+    margin-bottom: 40px;
+    color: #64748b;
+}
+
+#contactForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#contactForm textarea, #contactForm button {
+    grid-column: span 2;
+}
+
+#contactForm input, #contactForm textarea {
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+    border-color: #38bdf8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
+}
+
+#contactForm button {
+    padding: 18px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contactForm button:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+#formStatus {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 50px 10%;
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+}
+
+/* --- Responsive Mode (HP & Tablet) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+    }
+    
+    .nav-links {
+        display: none; /* Kamu bisa menambahkan menu hamburger nanti jika perlu */
+    }
+
+    #contactForm {
+        grid-template-columns: 1fr;
+    }
+
+    #contactForm textarea, #contactForm button {
+        grid-column: span 1;
+    }
+
+    .about-section {
+        padding: 80px 10%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}

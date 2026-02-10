@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTechno.ai | Solusi AI Masa Depan</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="./img/logo_profile.png" alt="Logo MyTechno" class="nav-logo">
+                <div class="logo-text">MyTechno<span>.ai</span></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#contact" class="btn-cta">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Cerdaskan Bisnis Anda dengan AI</h1>
+            <p>Implementasi teknologi AI tercanggih untuk efisiensi dan pertumbuhan tanpa batas di era digital.</p>
+            <button id="learnMore">Mulai Sekarang</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Layanan Kami</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <div class="icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <p>Otomatisasi data untuk prediksi bisnis yang lebih akurat dan terukur.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">💬</div>
+                <h3>NLP Chatbot</h3>
+                <p>Asisten virtual cerdas yang memahami konteks bahasa manusia secara alami.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">👁️</div>
+                <h3>Computer Vision</h3>
+                <p>Sistem pengenalan visual untuk keamanan cerdas dan analisis industri.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Tentang MyTechno.ai</h2>
+            <p>Kami adalah pionir dalam penyediaan solusi kecerdasan buatan di Indonesia, berfokus pada kemudahan
+                integrasi dan hasil yang nyata bagi setiap klien kami.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Hubungi Kami</h2>
+            <p>Pesan Anda akan langsung terkirim ke email <strong>my.techno.ai.site@gmail.com</strong></p>
+
+            <form id="contactForm" action="https://formspree.io/f/xaqdqyyd" method="POST">
+                <input type="text" name="Nama" placeholder="Nama Lengkap" required>
+                <input type="email" name="Email" placeholder="Alamat Email" required>
+                <textarea name="Pesan" placeholder="Apa yang bisa kami bantu?" rows="5" required></textarea>
+
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" id="submitBtn">Kirim Pesan</button>
+            </form>
+            <div id="formStatus"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MyTechno.ai - Memberdayakan Bisnis dengan Kecerdasan Buatan.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
